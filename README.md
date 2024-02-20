@@ -25,7 +25,13 @@ This exporter is designed to expose metrics about a hypothetical service written
     cd openvpn-auth-log-exporter
     ```
 
-3. Build the exporter:
+3. Download the dependencies
+
+    ```bash
+    go mod download
+    ```
+
+4. Build the exporter:
 
     ```bash
     go build main .
@@ -88,5 +94,5 @@ docker build -t openvpn-auth-log-exporter .
 Then run the conatiner. Remember to make the volume bind ready for the .log file in your system file
 
 ```bash
-docker run -p 9177:9177 -v ./ovpn-ldap-auth.log:/go/src/app/ovpn-ldap-auth.log openvpn-exporter:latest
+docker run -p 9177:9177 -v ./ovpn-ldap-auth.log:/go/src/app/openvpn-status-auth.log openvpn-exporter:latest
 ```

@@ -51,7 +51,7 @@ func main() {
 	var (
 		listenAddress    = flag.String("web.listen-address", ":9177", "Address to listen on for web interface and telemetry.")
 		metricsPath      = flag.String("web.telemetry-path", "/metrics", "Path under which to expose metrics.")
-		openvpnAuthPaths = flag.String("openvpn.auth_paths", "/go/src/app/ovpn-ldap-auth.log", "Paths at which OpenVPN places its auth files.")
+		openvpnAuthPaths = flag.String("openvpn.auth_paths", "/go/src/app/openvpn-status-auth.log", "Paths at which OpenVPN places its auth files.")
 	)
 	flag.Parse()
 
